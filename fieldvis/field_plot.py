@@ -258,7 +258,8 @@ def get_meshes(data_readers, data_index, plot_objects_kwargs):
     Args:
         data_readers (list): list of functions which have an integer as an argument which
             specifies the index of the dataset from a collection of iterations to be visualized.
-            The function should return an np.ndarray representing the requested data.
+            The function should return a list containing either one (scalar data) or three (vector data) 
+            np.ndarrays representing the requested data.
         data_index (int): index of the data to be visualized. Example: if there are 3 datasets available
             representing different iterations of a simulation, then indexes can be 0, 1 or 2.
         plot_objects_kwargs (list): list of dictionaries containing plot options for the given plot object.
@@ -287,7 +288,8 @@ def create_frame(data_readers, data_index, plot_objects_kwargs, plotter_kwargs):
     Args:
         data_readers (list): list of functions which have an integer as an argument which
             specifies the index of the dataset from a collection of iterations to be visualized.
-            The function should return an np.ndarray representing the requested data.
+            The function should return a list containing either one (scalar data) or three (vector data) 
+            np.ndarrays representing the requested data.
         data_index (int): index of the data to be visualized. Example: if there are 3 datasets available
             representing different iterations of a simulation, then indexes can be 0, 1 or 2.
         plot_objects_kwargs (list): list of dictionaries containing plot options for the given plot object.
@@ -307,7 +309,8 @@ def animator(data_readers, plot_objects_kwargs, n_datasets, save_path='', n_proc
     Args:
         data_readers (list): list of functions which have an integer as an argument which
             specifies the index of the dataset from a collection of iterations to be visualized.
-            The function should return an np.ndarray representing the requested data.
+            The function should return a list containing either one (scalar data) or three (vector data) 
+            np.ndarrays representing the requested data.
         plot_objects_kwargs (list): list of dictionaries containing plot options for the given plot object.
         n_datasets (int): number of frames worth of datasets available.
         save_path (str, optional): path to where the animation frames will be stored. Defaults to 'animation_i'.
@@ -379,7 +382,8 @@ def check_animator_args(data_readers, plot_objects_kwargs, n_datasets):
     Args:
         data_readers (list): list of functions which have an integer as an argument which
             specifies the index of the dataset from a collection of iterations to be visualized.
-            The function should return an np.ndarray representing the requested data.
+            The function should return a list containing either one (scalar data) or three (vector data) 
+            np.ndarrays representing the requested data.
         plot_objects_kwargs (list): list of dictionaries containing plot options for the given plot object.
         n_datasets (int): number of frames worth of datasets available.
     """
